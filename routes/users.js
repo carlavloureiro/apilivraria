@@ -1,6 +1,7 @@
 const express = require("express");
 const router = express.Router();
 const usuarios = require("../data/usuarios");
+
 // Listar todos os usuários
 router.get("/", (req, res) => {
  res.json(usuarios);
@@ -29,10 +30,11 @@ router.put("/:id", (req, res) => {
  const id = req.params.id;
  const dadosAtualizados = req.body;
  res.json({
- mensagem: `Usuário ${id} atualizado`,
- dados: dadosAtualizados
+    mensagem: `Usuário ${id} atualizado`,
+    dados: dadosAtualizados
  });
 });
+
 // Excluir usuário
 router.delete("/:id", (req, res) => {
  const id = req.params.id;
