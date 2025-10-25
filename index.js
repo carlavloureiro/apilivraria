@@ -10,7 +10,7 @@ const userRoutes = require("./routes/users");
 app.use("/users", userRoutes);
 
 const bookRoutes = require("./routes/books");
-
+app.use("/users", bookRoutes);
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
